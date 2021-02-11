@@ -3,9 +3,16 @@
 
 <head>
     <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }} />
+    <script type="text/javascript" src="/static/script.js"></script>
 </head>
 
 <body>
+    
+    <label for="name">Name (4 to 8 characters):</label>
+
+    <input type="text" id="name" name="name" required
+       minlength="4" maxlength="8" size="10"><button id="myCoolButton">Enter</button> 
+
     <h1>What's being reported about {{ topic }}?</h1>
     <div class='container'>
         {% for i in range(10) %}
@@ -15,7 +22,8 @@
         </div>
         {% endfor %}
     </div>
-
+    
+    
 </body>
 
 </html>
