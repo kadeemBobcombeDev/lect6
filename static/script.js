@@ -5,11 +5,8 @@ alert('Hello World!');
 window.onload = () => { // onload makes sure the content is loaded on page first
     document.getElementById('myCoolButton').addEventListener('click', () => {
         const userText = document.getElementById('input').value;
-        //document.getElementById('topic').textContent = userText;
         console.log('Button was clicked by'); // console.log is like printing in JS!
         console.log(userText);
-
-        //document.getElementById('topic').textContent = userText;
         const url = '/search/' + userText; // This should remind you of APIs in Python!
         alert('This button was clicked');
         console.log(url)
