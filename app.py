@@ -26,7 +26,17 @@ def hello_world():
 @app.route('/search/<user_text>')    
 def show_user(user_text):
     #show the user that was input
-    return {'userText': user_text}
+    user_article=get_article_data(user_text)
+    return (
+        {
+        'userText': user_text,
+        'headlines': user_article['headlines'],
+        "snippets": user_article['snippets'],
+        "dates": user_article['dates'],
+        "urls": user_article['urls'],
+        }
+    )
+    
     
     
 
